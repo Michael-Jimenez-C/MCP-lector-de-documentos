@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-from .modules.pdf import extract_data_from_pdf, get_length_of_pdf, extract_tables_from_pdf
+from .modules.pdf import extract_data_from_pdf, get_length_of_pdf, extract_tables_from_pdf, extract_images_and_save
 import os
 
 
@@ -31,6 +31,16 @@ async def pdf_read(path:str, page: int = 0) -> str:
     page: número de página a extraer, 0 por defecto
     """
     return extract_data_from_pdf(path, page = page)
+
+@mcp.tool()
+async def extract_pdf_images(path: str, out_path: str, page: int = 0) -> list:
+    """
+    Extrae imágenes de un PDF y las guarda.
+    path: debe ser la ruta absoluta al archivo PDF
+    out_path: ruta donde se guardarán las imágenes, por ejemplo "/tmp"
+    page: número de página a extraer, 0 por defecto
+    """
+    return extract_images_and_save(path, out_path, page = page)
 
 #plain
 @mcp.tool()
