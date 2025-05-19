@@ -1,5 +1,5 @@
 from mcp.server.fastmcp import FastMCP
-from .pdf.pdf import extract_data_from_pdf, get_length_of_pdf, extract_tables_from_pdf
+from .modules.pdf import extract_data_from_pdf, get_length_of_pdf, extract_tables_from_pdf
 import os
 
 

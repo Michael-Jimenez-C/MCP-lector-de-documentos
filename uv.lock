@@ -141,6 +141,7 @@ dependencies = [
     { name = "httpx" },
     { name = "mcp", extra = ["cli"] },
     { name = "pdfplumber" },
+    { name = "pillow" },
 ]
 
 [package.metadata]
@@ -148,6 +149,7 @@ requires-dist = [
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.8.1" },
     { name = "pdfplumber", specifier = ">=0.11.6" },
+    { name = "pillow", specifier = ">=11.2.1" },
 ]
 
 [[package]]
