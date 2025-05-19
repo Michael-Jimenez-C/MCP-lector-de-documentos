@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "easyocr>=1.7.2",
     "httpx>=0.28.1",
     "mcp[cli]>=1.8.1",
     "pdfplumber>=0.11.6",

@@ -1,5 +1,6 @@
 from mcp.server.fastmcp import FastMCP
 from .modules.pdf import extract_data_from_pdf, get_length_of_pdf, extract_tables_from_pdf, extract_images_and_save
+from .modules.ocr import extract_text_from_image
 import os
 
 
@@ -88,8 +89,13 @@ async def read_chunk(path: str, chunk: int=0, chunk_size: int = 1024) -> str:
 
 #EXCEL
 
-#imagenes
-
 #Extracción de texto
-
+@mcp.tool()
+async def extract_image_text(path: str, lang: str = 'es') -> str:
+    """
+    Extrae texto de una imagen
+    path: debe ser la ruta absoluta a la imagen
+    lang: idioma del texto a extraer, por defecto 'es'
+    """
+    return extract_text_from_image(path, lang = lang)
 #Audio STT
